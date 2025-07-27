@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Choose Role</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Reuse the same background video -->
+  <video autoplay muted loop id="bg-video">
+    <source src=".assets/1.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="container">
+    <h1>Are You?</h1>
+    <div class="role-buttons">
+      <button onclick="goToBuyer()">Buyer</button>
+      <button onclick="goToSeller()">Seller</button>
+    </div>
+  </div>
+
+  <script>
+    function goToBuyer() {
+      window.location.href = "buyer.html"; // You can create this page next
+    }
+
+    function goToSeller() {
+      window.location.href = "seller.html"; // You can create this page next
+    }
+  </script>
+</body>
+</html>

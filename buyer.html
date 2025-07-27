@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Buyer Page</title>
+  <link rel="stylesheet" href="buyer.css" />
+</head>
+<body>
+
+  <video autoplay muted loop id="bgVideo">
+    <source src=".assets/1.mp4" type="video/mp4" />
+  </video>
+
+  <header class="header">
+    <div class="logo-text">Smart Buyer Hub</div>
+    <nav class="top-menu">
+      <a href="index.html">Home</a>
+      <a href="seller.html">Sell</a>
+      <a href="help.html">Help</a>
+    </nav>
+  </header>
+
+  <main class="main-section">
+    <div class="search-container">
+      <select id="locationSelect">
+        <option>Rajahmundry</option>
+        <option>Hyderabad</option>
+        <option>Vijayawada</option>
+        <option>Chennai</option>
+        <option>Bangalore</option>
+      </select>
+      <input type="text" id="searchInput" placeholder="Search for products..." />
+      <button onclick="searchProduct()">🔍 Search</button>
+    </div>
+
+    <div id="filtersSection" class="filters hidden">
+      <div class="filter-row">
+        <label>Quantity Unit:</label>
+        <input type="number" placeholder="Enter quantity" />
+        <div class="btn-group" data-group="unit">
+          <button class="btn selected">Tonne</button>
+          <button class="btn">Kg</button>
+        </div>
+      </div>
+
+      <div class="filter-row">
+        <label>Packaging Size:</label>
+        <div class="btn-group" data-group="packaging">
+          <button class="btn">5 Kg</button>
+          <button class="btn">10 Kg</button>
+          <button class="btn">15 Kg</button>
+          <button class="btn">20 Kg</button>
+          <button class="btn">50 Kg</button>
+        </div>
+      </div>
+
+      <div class="filter-row">
+        <label>Looking For:</label>
+        <div class="btn-group" data-group="buyer">
+          <button class="btn">Wholesaler</button>
+          <button class="btn">Manufacturer</button>
+          <button class="btn">Retailer</button>
+          <button class="btn">Exporter</button>
+          <button class="btn selected">All</button>
+        </div>
+      </div>
+
+      <div class="filter-row">
+        <label>City:</label>
+        <input type="text" placeholder="Enter city or pincode" />
+      </div>
+
+      <div class="filter-row radio-group">
+        <label></label>
+        <label><input type="radio" name="supplierFilter" /> Show suppliers only from the city</label>
+        <label><input type="radio" name="supplierFilter" /> Show suppliers dealing in the city</label>
+      </div>
+
+      <div class="filter-row">
+        <button class="btn search-btn">Search</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="buyer.js"></script>
+</body>
+</html>
